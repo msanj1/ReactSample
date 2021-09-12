@@ -43,17 +43,17 @@ const BasicForm = (props) => {
 
   if (firstNameIsValid && lastNameIsValid && emailIsValid) formIsValid = true;
 
-  const submitHandler = event =>{
+  const submitHandler = (event) => {
     event.preventDefault();
 
-    if(!formIsValid){
+    if (!formIsValid) {
       return;
     }
 
     restFirstName();
     restLastName();
     restEmail();
-  }
+  };
 
   return (
     <form onSubmit={submitHandler}>
